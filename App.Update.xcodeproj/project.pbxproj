@@ -13,6 +13,9 @@
 		3D1B5F291FA833E0007703CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1B5F281FA833E0007703CF /* Assets.xcassets */; };
 		3D1B5F2C1FA833E0007703CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1B5F2A1FA833E0007703CF /* LaunchScreen.storyboard */; };
 		3D3E2EEA1FABB30D002C86F1 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E2EE91FABB30D002C86F1 /* UIImageViewExtensions.swift */; };
+		3D3E2EEC1FACEF0F002C86F1 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E2EEB1FACEF0F002C86F1 /* CommentsViewController.swift */; };
+		3D3E2EEE1FACF0D2002C86F1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E2EED1FACF0D2002C86F1 /* Comment.swift */; };
+		3D3E2EF01FAD0AD6002C86F1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E2EEF1FAD0AD6002C86F1 /* CommentTableViewCell.swift */; };
 		3DF1DEA11FAA9DF800A51964 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1DEA01FAA9DF800A51964 /* PostTableViewCell.swift */; };
 		3DF1DEA41FAADFE700A51964 /* ProductHuntNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1DEA31FAADFE700A51964 /* ProductHuntNetworkRequest.swift */; };
 		3DF1DEA61FAB87D800A51964 /* ProductHuntResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1DEA51FAB87D800A51964 /* ProductHuntResource.swift */; };
@@ -28,6 +31,9 @@
 		3D1B5F2B1FA833E0007703CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D1B5F2D1FA833E0007703CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D3E2EE91FABB30D002C86F1 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		3D3E2EEB1FACEF0F002C86F1 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		3D3E2EED1FACF0D2002C86F1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3D3E2EEF1FAD0AD6002C86F1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		3DF1DEA01FAA9DF800A51964 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		3DF1DEA31FAADFE700A51964 /* ProductHuntNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHuntNetworkRequest.swift; sourceTree = "<group>"; };
 		3DF1DEA51FAB87D800A51964 /* ProductHuntResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHuntResource.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF1DEA71FAB8C7400A51964 /* Post.swift */,
+				3D3E2EED1FACF0D2002C86F1 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				3D1B5F231FA833E0007703CF /* FeedViewController.swift */,
+				3D3E2EEB1FACEF0F002C86F1 /* CommentsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF1DEA01FAA9DF800A51964 /* PostTableViewCell.swift */,
+				3D3E2EEF1FAD0AD6002C86F1 /* CommentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,8 +212,11 @@
 				3D1B5F241FA833E0007703CF /* FeedViewController.swift in Sources */,
 				3D3E2EEA1FABB30D002C86F1 /* UIImageViewExtensions.swift in Sources */,
 				3D1B5F221FA833E0007703CF /* AppDelegate.swift in Sources */,
+				3D3E2EEC1FACEF0F002C86F1 /* CommentsViewController.swift in Sources */,
 				3DF1DEA81FAB8C7400A51964 /* Post.swift in Sources */,
 				3DF1DEA41FAADFE700A51964 /* ProductHuntNetworkRequest.swift in Sources */,
+				3D3E2EF01FAD0AD6002C86F1 /* CommentTableViewCell.swift in Sources */,
+				3D3E2EEE1FACF0D2002C86F1 /* Comment.swift in Sources */,
 				3DF1DEA11FAA9DF800A51964 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

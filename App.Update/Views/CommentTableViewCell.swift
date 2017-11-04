@@ -1,18 +1,14 @@
 import UIKit
 
-final class PostTableViewCell: UITableViewCell {
+final class CommentTableViewCell: UITableViewCell {
   
-  @IBOutlet weak var title: UILabel!
-  @IBOutlet weak var backgroundImage: UIImageView!
-  @IBOutlet weak var containerView: UIView!
-
-  var postID: Int!
+  @IBOutlet weak var body: UITextView!
 
   override func awakeFromNib() {
     super.awakeFromNib()
 
-    containerView?.layer.cornerRadius = 8
-    containerView?.clipsToBounds = true
+    body.layer.cornerRadius = 8
+    body.clipsToBounds = true
 
     let selectionColor = UIView()
     selectionColor.backgroundColor = UIColor.black
@@ -23,3 +19,4 @@ final class PostTableViewCell: UITableViewCell {
     super.setSelected(selected, animated: animated)
   }
 }
+

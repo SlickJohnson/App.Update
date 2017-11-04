@@ -44,10 +44,8 @@ extension FeedViewController: UITableViewDataSource {
     let post = posts[indexPath.row]
 
     postCell.title.text = post.name
-
-
-    postCell.backgroundImage.getPostScreenshot(with: post.screenshot)
-
+    postCell.backgroundImage.getPostScreenshot(with: post.screenshotURL)
+    postCell.postID = post.id
 
     return postCell
   }
@@ -58,6 +56,16 @@ extension FeedViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 200
   }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let selectedCell = tableView.cellForRow(at: indexPath) as? PostTableViewCell else { return }
+
+    guard let commentsVC = self.storyboard?.instantiateViewController(withIdentifier: "CommentsViewController") as? CommentsViewController else { return }
+
+    commentsVC.postCell = selectedCell
+
+    self.navigationController?.pushViewController(commentsVC, animated: true)
+  }
 }
 
 // MARK: Helper methods
@@ -66,16 +74,16 @@ private extension FeedViewController {
     let resource = ProductHuntResource.posts
 
     DispatchQueue.global(qos: .background).async { [weak self] in
-      self?.productHuntNetworkRequest.getFeaturedPosts(resource: resource) { (res: Result<[Post]>) in
+      self?.productHuntNetworkRequest.getPosts(resource) { res in
         switch res {
         case let .success(data):
           DispatchQueue.main.async {
             self?.posts = data
           }
+          
         case let .failure(error):
-          break
+          dump(error)
         }
-
       }
     }
   }

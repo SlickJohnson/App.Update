@@ -4,10 +4,11 @@ struct Post {
   let id: Int
   let name: String
   let tagline: String
-  var screenshot: URL
+  var screenshotURL: URL
   let votesCount: Int
   let commentsCount: Int
 }
+
 struct PostList: Decodable {
   let posts: [Post]?
 }
@@ -28,7 +29,7 @@ extension Post: Decodable {
     let screenshotURL = try screenshotURLContainer.decode(URL.self, forKey: .screenshotURL)
     let screenshotImageView = screenshotURL
 
-    self.init(id: id, name: name, tagline: tagline, screenshot: screenshotImageView, votesCount: votesCount, commentsCount: commentsCount)
+    self.init(id: id, name: name, tagline: tagline, screenshotURL: screenshotImageView, votesCount: votesCount, commentsCount: commentsCount)
   }
 }
 

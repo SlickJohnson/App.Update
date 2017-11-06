@@ -15,7 +15,7 @@ Explore an up-to-date list of the featured apps on Product Hunt.
 ## Built With
 
 * [Product Hunt API](https://api.producthunt.com/v1/docs)
-
+  ![Image of Product Hunt logo](https://s3.producthunt.com/static/ph-logo-1.png)
 ## Versioning
 
 ### V0
